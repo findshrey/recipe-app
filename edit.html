@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+   <input id="recipe-name" placeholder="Recipe Name">
+   <span id="last-edited"></span>
+   <textarea id="recipe-steps" placeholder="Enter the Steps"></textarea>
+   <h3>Ingredients</h3>
+   <div id="ingredient-list">
+
+   </div>
+   <form id="new-ingredient">
+      <input placeholder="Add Ingredient" name="ingredientName">
+      <button>Add</button>
+   </form>
+   <h3>Danger Zone</h3>
+   <button id="remove-recipe">Delete Recipe</button>
+   <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment-with-locales.min.js"></script>
+   <script src="./recipe-functions.js"></script>
+   <script src="./edit.js"></script>
+</body>
+</html>

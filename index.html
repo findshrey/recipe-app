@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Recipe App</title>
+</head>
+<body>
+   <h1>Recipe App</h1>
+   <input id="search-recipe" type="text" placeholder="Search">
+   <select id="sort-by">
+      <option value="byEdited">Sort by last edited</option>
+      <option value="byCreated">Sort by recently created</option>
+      <option value="alphabetical" selected>Sort alphabetically</option>
+   </select>
+   <div id="recipe-list">
+   <!-- Recipes to be rendered here -->
+   </div>
+   <button id="create-recipe">Create Recipe</button>
+   <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment-with-locales.min.js"></script>
+   <script src="./recipe-functions.js"></script>
+   <script src="./recipe-app.js"></script>
+</body>
+</html>
