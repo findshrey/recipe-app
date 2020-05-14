@@ -7,12 +7,12 @@ const filters = {
 
 renderRecipeList(recipes, filters)
 
-document.querySelector('#search-recipe').addEventListener('input', function (e) {
+document.querySelector('#search-recipe').addEventListener('input', (e) => {
    filters.searchText = e.target.value
    renderRecipeList(recipes, filters)
 })
 
-document.querySelector('#create-recipe').addEventListener('click', function () {
+document.querySelector('#create-recipe').addEventListener('click', () => {
    const id = uuidv4()
    const timestamp = moment().valueOf() 
    
@@ -28,12 +28,12 @@ document.querySelector('#create-recipe').addEventListener('click', function () {
    location.assign(`/edit.html#${id}`)
 })
 
-document.querySelector('#sort-by').addEventListener('change', function (e) {
+document.querySelector('#sort-by').addEventListener('change', (e) => {
    filters.sortBy = e.target.value
    renderRecipeList(recipes, filters)
 })
 
-window.addEventListener('storage', function (e) {
+window.addEventListener('storage', (e) => {
    if (e.key === 'recipes') {
       recipes = JSON.parse(e.newValue)
       renderRecipeList(recipes, filters)
